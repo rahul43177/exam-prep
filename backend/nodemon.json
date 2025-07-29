@@ -1,0 +1,29 @@
+{
+  "watch": [
+    "src/"
+  ],
+  "ext": "js,json",
+  "ignore": [
+    "src/**/*.test.js",
+    "src/**/*.spec.js",
+    "tests/",
+    "coverage/",
+    "logs/",
+    "data/",
+    "node_modules/"
+  ],
+  "exec": "node src/server.js",
+  "env": {
+    "NODE_ENV": "development",
+    "DEBUG": "ib-acio:*"
+  },
+  "delay": 1000,
+  "verbose": true,
+  "restartable": "rs",
+  "colours": true,
+  "legacyWatch": false,
+  "events": {
+    "restart": "echo '\\n🔄 Server restarted due to file changes\\n'",
+    "crash": "echo '💥 Server crashed - waiting for file changes before restart\\n'"
+  }
+}
